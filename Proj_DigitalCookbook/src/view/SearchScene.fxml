@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="935.0" prefWidth="722.0" style="-fx-background-color: #FFE4C4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchSceneController">
+   <children>
+      <Label layoutX="95.0" layoutY="91.0" text="Results:">
+         <font>
+            <Font name="Gadugi Bold" size="22.0" />
+         </font></Label>
+      <VBox layoutX="163.0" layoutY="125.0" spacing="18.0">
+         <children>
+            <ImageView id="item:1" fx:id="image_1" fitHeight="123.0" fitWidth="151.0" layoutX="181.0" layoutY="139.0" pickOnBounds="true" />
+            <ImageView id="item:1" fx:id="image_2" fitHeight="123.0" fitWidth="151.0" layoutX="181.0" layoutY="290.0" pickOnBounds="true" />
+            <ImageView id="item:1" fx:id="image_3" fitHeight="123.0" fitWidth="151.0" layoutX="163.0" layoutY="458.0" pickOnBounds="true" />
+            <ImageView id="item:1" fx:id="image_4" fitHeight="123.0" fitWidth="151.0" layoutX="181.0" layoutY="566.0" pickOnBounds="true" />
+            <ImageView id="item:1" fx:id="image_5" fitHeight="123.0" fitWidth="151.0" layoutX="181.0" layoutY="704.0" pickOnBounds="true" />
+         </children>
+      </VBox>
+      <Label id="label_1" fx:id="label_1" contentDisplay="TEXT_ONLY" ellipsisString="" layoutX="319.0" layoutY="170.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_1" onMouseExited="#event_cancelHighlightLabel_1" snapToPixel="false" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="label_2" layoutX="319.0" layoutY="314.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_2" onMouseExited="#event_cancelHighlightLabel_2" snapToPixel="false" textAlignment="CENTER" wrapText="true" />
+      <Label fx:id="label_3" layoutX="319.0" layoutY="455.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_3" onMouseExited="#event_cancelHighlightLabel_3" snapToPixel="false" textAlignment="CENTER" />
+      <Label fx:id="label_4" ellipsisString="" layoutX="319.0" layoutY="595.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_4" onMouseExited="#event_cancelHighlightLabel_4" snapToPixel="false" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" />
+      <Label fx:id="label_5" layoutX="319.0" layoutY="734.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_5" onMouseExited="#event_cancelHighlightLabel_5" textAlignment="CENTER" />
+      <HBox alignment="TOP_CENTER" layoutX="245.0" layoutY="833.0" prefHeight="48.0" prefWidth="151.0">
+         <children>
+            <Button fx:id="btn_former" layoutX="271.0" layoutY="862.0" mnemonicParsing="false" onAction="#eventButtonLeft" prefHeight="55.0" prefWidth="44.0" text="&lt;" />
+            <TextField fx:id="text_page" alignment="CENTER" editable="false" layoutX="342.0" layoutY="862.0" prefHeight="54.0" prefWidth="54.0" />
+            <Button fx:id="btn_later" layoutX="411.0" layoutY="862.0" mnemonicParsing="false" onAction="#eventButtonRight" prefHeight="50.0" prefWidth="46.0" text="&gt;" />
+         </children>
+      </HBox>
+      <HBox layoutX="163.0" layoutY="31.0" maxHeight="40.0" minHeight="40.0" prefHeight="40.0">
+         <children>
+            <TextField fx:id="text_search" layoutX="165.0" layoutY="42.0" prefHeight="40.0" prefWidth="241.0" />
+            <Button fx:id="btn_search" layoutX="412.0" layoutY="49.0" maxHeight="42.0" minHeight="40.0" mnemonicParsing="false" onAction="#eventButtonSearch" prefHeight="40.0" prefWidth="70.0" text="Search" />
+            <Button fx:id="btn_back" layoutX="498.0" layoutY="49.0" maxHeight="42.0" minHeight="28.0" mnemonicParsing="false" onAction="#eventButtonBack" prefWidth="60.0" text="Back" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

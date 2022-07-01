@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="804.0" prefWidth="543.0" style="-fx-background-color: #FFEBCD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.favoriteRecipeSceneController">
+   <children>
+      <VBox layoutX="113.0" layoutY="77.0" prefWidth="330.0" spacing="10.0">
+         <children>
+            <HBox layoutX="109.0" layoutY="77.0">
+               <children>
+                  <ImageView fx:id="image_1" fitHeight="123.0" fitWidth="151.0" layoutX="71.0" layoutY="71.0" pickOnBounds="true" />
+                  <Label fx:id="label_1" alignment="CENTER" contentDisplay="CENTER" layoutX="299.0" layoutY="132.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_1" onMouseExited="#event_cancelHighlightLabel_1" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="14.0" top="30.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="82.0" layoutY="192.0">
+               <children>
+                  <ImageView fx:id="image_2" fitHeight="123.0" fitWidth="151.0" layoutX="71.0" layoutY="71.0" pickOnBounds="true" />
+                  <Label fx:id="label_2" alignment="CENTER" contentDisplay="CENTER" layoutX="299.0" layoutY="132.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_2" onMouseExited="#event_cancelHighlightLabel_2" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="14.0" top="30.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="98.0" layoutY="298.0">
+               <children>
+                  <ImageView fx:id="image_3" fitHeight="123.0" fitWidth="151.0" layoutX="71.0" layoutY="71.0" pickOnBounds="true" />
+                  <Label fx:id="label_3" alignment="CENTER" contentDisplay="CENTER" layoutX="299.0" layoutY="132.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_3" onMouseExited="#event_cancelHighlightLabel_3" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="14.0" top="30.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="98.0" layoutY="410.0">
+               <children>
+                  <ImageView fx:id="image_4" fitHeight="123.0" fitWidth="151.0" layoutX="71.0" layoutY="71.0" pickOnBounds="true" />
+                  <Label fx:id="label_4" alignment="CENTER" contentDisplay="CENTER" layoutX="299.0" layoutY="132.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_4" onMouseExited="#event_cancelHighlightLabel_4" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="14.0" top="30.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox layoutX="98.0" layoutY="552.0" onMouseExited="#event_cancelHighlightLabel_5">
+               <children>
+                  <ImageView fx:id="image_5" fitHeight="123.0" fitWidth="151.0" layoutX="71.0" layoutY="71.0" pickOnBounds="true" />
+                  <Label fx:id="label_5" alignment="CENTER" contentDisplay="CENTER" layoutX="299.0" layoutY="132.0" onMouseClicked="#clickRecipe" onMouseEntered="#event_highlightLabel_5" onMouseExited="#event_cancelHighlightLabel_5" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="14.0" top="30.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5.0">
+               <children>
+                  <Button fx:id="btn_former" layoutX="193.0" layoutY="706.0" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#eventButtonLeft" prefHeight="34.0" prefWidth="34.0" text="&lt;" />
+                  <TextField fx:id="text_page" alignment="CENTER" editable="false" layoutX="263.0" layoutY="706.0" maxHeight="34.0" minHeight="34.0" prefHeight="34.0" prefWidth="34.0" />
+                  <Button fx:id="btn_later" layoutX="343.0" layoutY="706.0" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#eventButtonRight" prefHeight="34.0" prefWidth="34.0" text="&gt;" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="133.0" layoutY="9.0" prefHeight="63.0" prefWidth="246.0" text="Favorite Recipe" textFill="#ff2424">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_back" layoutX="398.0" layoutY="27.0" maxHeight="42.0" minHeight="28.0" mnemonicParsing="false" onAction="#eventButtonBack" prefHeight="28.0" prefWidth="62.0" text="back" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="781.0" prefWidth="934.0" style="-fx-background-color: #FFEBCD;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecipeSceneController">
+   <children>
+      <Separator layoutX="61.0" layoutY="210.0" prefHeight="20.0" prefWidth="851.0" />
+      <Label layoutX="166.0" layoutY="234.0" prefHeight="28.0" prefWidth="126.0" text="Ingredients">
+         <font>
+            <Font name="Gadugi" size="23.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="594.0" layoutY="220.0" prefHeight="56.0" prefWidth="94.0" text="Steps">
+         <font>
+            <Font name="Gadugi" size="23.0" />
+         </font></Label>
+      <VBox layoutX="466.0" layoutY="276.0">
+         <children>
+            <ImageView fx:id="image_imstruc" fitHeight="200.0" fitWidth="350.0" layoutX="687.0" layoutY="325.0" pickOnBounds="true" />
+            <TextArea fx:id="text_instruc" editable="false" layoutX="735.0" layoutY="561.0" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+         </children>
+      </VBox>
+      <TableView fx:id="tableView_ingredients" layoutX="91.0" layoutY="276.0" prefHeight="448.0" prefWidth="261.0">
+        <columns>
+          <TableColumn fx:id="column_name" prefWidth="136.0" text="name" />
+          <TableColumn fx:id="column_quanti" editable="false" prefWidth="123.0" sortable="false" text="quantities" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="btn_later" layoutX="825.0" layoutY="433.0" mnemonicParsing="false" onAction="#eventButtonRight" prefHeight="43.0" prefWidth="46.0" text="&gt;">
+         <tooltip>
+            <Tooltip text="press button go to next step" />
+         </tooltip></Button>
+      <Button fx:id="btn_former" layoutX="408.0" layoutY="433.0" mnemonicParsing="false" onAction="#eventButtonLeft" prefHeight="43.0" prefWidth="46.0" text="&lt;">
+         <tooltip>
+            <Tooltip text="press the button go back to the former step" />
+         </tooltip></Button>
+      <Pane prefHeight="219.0" prefWidth="930.0">
+         <children>
+            <ImageView fx:id="image_mainImage" fitHeight="123.0" fitWidth="151.0" layoutX="37.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="text_RecName" layoutX="209.0" layoutY="61.0" prefHeight="88.0" prefWidth="280.0" text="Recipe Name" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font name="Gadugi Bold" size="21.0" />
+               </font>
+            </Label>
+            <VBox layoutX="803.0" layoutY="42.0" prefHeight="156.0" prefWidth="79.0" spacing="15.0">
+               <children>
+                  <Button layoutX="716.0" layoutY="40.0" mnemonicParsing="false" onAction="#eventButtonBack" prefHeight="42.0" prefWidth="96.0" text="Back" />
+                  <Button layoutX="713.0" layoutY="144.0" mnemonicParsing="false" onAction="#eventButtonDelete" prefHeight="42.0" prefWidth="94.0" text="Delete" />
+                  <Button fx:id="btn_edit" layoutX="713.0" layoutY="92.0" mnemonicParsing="false" onAction="#eventButtonEdit" prefHeight="42.0" prefWidth="95.0" text="Edit" />
+               </children>
+            </VBox>
+            <VBox layoutX="514.0" layoutY="45.0" prefHeight="159.0" prefWidth="253.0" spacing="10.0">
+               <children>
+                  <HBox layoutX="467.0" layoutY="38.0">
+                     <children>
+                        <Label layoutX="716.0" layoutY="122.0" prefHeight="43.0" prefWidth="206.0" text="Cook Time (min) :" />
+                        <TextField fx:id="text_cookTime" alignment="CENTER" editable="false" layoutX="894.0" layoutY="122.0" prefHeight="42.0" prefWidth="46.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="467.0" layoutY="83.0">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="206.0" text="Prepare Time (min): " />
+                        <TextField fx:id="text_preTime" alignment="CENTER" editable="false" prefHeight="42.0" prefWidth="46.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="492.0" layoutY="122.0">
+                     <children>
+                        <Label prefHeight="42.0" prefWidth="206.0" text="Service Number:" />
+                        <TextField fx:id="text_defaultNumber" alignment="CENTER" onAction="#eventChangeDefaultNumber" prefHeight="42.0" prefWidth="46.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <CheckBox fx:id="chbox_favorate" layoutX="48.0" layoutY="171.0" mnemonicParsing="false" onAction="#eventIsFavorite" prefHeight="34.0" prefWidth="185.0" text="isFavorate" />
+         </children>
+      </Pane>
+      <TextField fx:id="text_InstrucPage" alignment="CENTER" editable="false" layoutX="618.0" layoutY="688.0" prefHeight="42.0" prefWidth="46.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="750.0" minHeight="639.0" prefHeight="639.0" prefWidth="1052.0" style="-fx-background-color: #FFEFD5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddRecipeSceneController">
+   <children>
+      <Label alignment="CENTER" layoutX="662.0" layoutY="79.0" prefHeight="57.0" prefWidth="119.0" text="Steps">
+         <font>
+            <Font name="Gadugi" size="23.0" />
+         </font></Label>
+      <Button fx:id="btn_finish" layoutX="764.0" layoutY="29.0" mnemonicParsing="false" onAction="#eventButtonFinished" text="Finish" />
+      <Button layoutX="889.0" layoutY="29.0" mnemonicParsing="false" onAction="#eventButtonQuit" text="Quit" />
+      <Pane prefHeight="639.0" prefWidth="496.0" style="-fx-background-color: #FFEBCD;">
+         <children>
+            <VBox alignment="CENTER" layoutX="81.0" layoutY="170.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="98.0" layoutY="170.0" prefHeight="42.0" prefWidth="149.0" text="Recipe Image" />
+                  <ImageView fx:id="image_addImage" fitHeight="123.0" fitWidth="151.0" layoutX="81.0" layoutY="212.0" pickOnBounds="true" smooth="false" style="-fx-background-color: #fecc79;" />
+                  <Button layoutX="124.0" layoutY="352.0" mnemonicParsing="false" onAction="#eventButtonAddMainImage" text="Add" />
+               </children>
+            </VBox>
+            <VBox layoutX="81.0" layoutY="450.0" prefHeight="156.0" prefWidth="192.0" spacing="15.0">
+               <children>
+                  <HBox layoutX="41.0" layoutY="273.0">
+                     <children>
+                        <Label layoutX="31.0" layoutY="259.0" prefHeight="42.0" prefWidth="110.0" text="Service Number:" />
+                        <TextField fx:id="text_addDefaultNumber" alignment="CENTER" layoutX="222.0" layoutY="266.0" onKeyTyped="#eventServiceNumber" prefHeight="40.0" prefWidth="40.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="41.0" layoutY="329.0" prefHeight="42.0" prefWidth="221.0">
+                     <children>
+                        <Label layoutX="64.0" layoutY="331.0" prefHeight="42.0" prefWidth="110.0" text="Cook Time:" />
+                        <TextField fx:id="text_cookTime" alignment="CENTER" layoutX="190.0" layoutY="329.0" onKeyTyped="#eventCookTime" prefHeight="40.0" prefWidth="40.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="42.0" layoutY="385.0" prefWidth="221.0">
+                     <children>
+                        <Label layoutX="42.0" layoutY="385.0" prefHeight="42.0" prefWidth="110.0" text="Prepare Time:" />
+                        <TextField fx:id="text_preTime" alignment="CENTER" layoutX="190.0" layoutY="385.0" onKeyTyped="#eventPreTIme" prefHeight="40.0" prefWidth="40.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label alignment="CENTER" layoutX="268.0" layoutY="163.0" prefHeight="35.0" prefWidth="200.0" text="Ingredients">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font></Label>
+            <HBox layoutX="255.0" layoutY="206.0" prefHeight="29.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="339.0" layoutY="345.0" prefHeight="29.0" prefWidth="217.0" text="Name " />
+                  <Label alignment="CENTER" layoutX="423.0" layoutY="357.0" prefHeight="30.0" prefWidth="124.0" text="Quanti">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </HBox>
+            <FlowPane alignment="CENTER" layoutX="64.0" layoutY="77.0" prefHeight="50.0" prefWidth="407.0">
+               <children>
+                  <Label prefHeight="44.0" prefWidth="152.0" text="Recipe Name:  " />
+                  <TextField fx:id="text_addName" prefHeight="42.0" prefWidth="252.0" promptText="title of your recipe" />
+               </children>
+            </FlowPane>
+            <ScrollPane layoutX="257.0" layoutY="242.0" prefHeight="364.0" prefWidth="200.0">
+               <content>
+                  <VBox prefHeight="450.0" prefWidth="184.0">
+                     <children>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="176.0">
+                           <children>
+                              <TextField fx:id="ing_name1" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti1" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name2" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti2" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name3" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti3" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name4" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti4" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name5" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti5" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name6" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti6" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name7" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti7" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name8" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti8" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name9" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti9" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name10" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti10" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name11" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti11" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name12" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti12" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name13" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti13" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name14" maxHeight="30.0" minHeight="30.0" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti14" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                        <HBox maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="194.0">
+                           <children>
+                              <TextField fx:id="ing_name15" maxHeight="30.0" minHeight="30.0" onAction="#eventIngQuanti" prefHeight="30.0" />
+                              <TextField fx:id="ing_quanti15" maxHeight="30.0" maxWidth="40.0" minHeight="30.0" minWidth="40.0" onKeyTyped="#eventIngQuanti" prefHeight="30.0" prefWidth="40.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </Pane>
+      <Separator layoutX="481.0" layoutY="64.0" orientation="VERTICAL" prefHeight="568.0" prefWidth="31.0" />
+      <ScrollPane fx:id="scp_step" layoutX="497.0" layoutY="136.0" prefHeight="470.0" prefWidth="510.0">
+         <content>
+            <VBox fx:id="vb_instruc" prefHeight="741.0" prefWidth="488.0">
+               <children>
+                  <HBox fx:id="hb_step2" layoutX="681.0" layoutY="316.0" prefHeight="123.0" prefWidth="400.0">
+                     <children>
+                        <Button fx:id="btn_step1" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#eventButtonAddStepImage" prefHeight="35.0" prefWidth="99.0" text="Add" />
+                        <ImageView fx:id="image_step1" fitHeight="123.0" fitWidth="151.0" layoutX="674.0" layoutY="155.0" pickOnBounds="true" />
+                        <TextArea fx:id="text_step1" layoutX="888.0" layoutY="155.0" prefHeight="123.0" prefWidth="300.0" wrapText="true" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb_step3" layoutX="694.0" layoutY="489.0" maxHeight="123.0" minHeight="123.0" prefHeight="123.0" prefWidth="400.0">
+                     <children>
+                        <Button fx:id="btn_step2" alignment="CENTER" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#eventButtonAddStepImage" prefHeight="35.0" prefWidth="100.0" text="Add" />
+                        <ImageView fx:id="image_step2" fitHeight="123.0" fitWidth="151.0" layoutX="674.0" layoutY="155.0" pickOnBounds="true" />
+                        <TextArea fx:id="text_step2" layoutX="888.0" layoutY="155.0" prefHeight="150.0" prefWidth="300.0" wrapText="true" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb_step1" prefHeight="123.0" prefWidth="590.0">
+                     <children>
+                        <Button fx:id="btn_step3" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#eventButtonAddStepImage" prefHeight="35.0" prefWidth="100.0" text="Add" />
+                        <ImageView fx:id="image_step3" fitHeight="123.0" fitWidth="151.0" layoutX="674.0" layoutY="155.0" pickOnBounds="true" />
+                        <TextArea fx:id="text_step3" layoutX="888.0" layoutY="155.0" prefHeight="150.0" prefWidth="300.0" wrapText="true" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb_step21" prefHeight="123.0" prefWidth="590.0">
+                     <children>
+                        <Button fx:id="btn_step4" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#eventButtonAddStepImage" prefHeight="35.0" prefWidth="100.0" text="Add" />
+                        <ImageView fx:id="image_step4" fitHeight="123.0" fitWidth="151.0" layoutX="674.0" layoutY="155.0" pickOnBounds="true" />
+                        <TextArea fx:id="text_step4" layoutX="888.0" layoutY="155.0" prefHeight="150.0" prefWidth="300.0" wrapText="true" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb_step22" prefHeight="123.0" prefWidth="590.0">
+                     <children>
+                        <Button fx:id="btn_step5" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#eventButtonAddStepImage" prefHeight="35.0" prefWidth="100.0" text="Add" />
+                        <ImageView fx:id="image_step5" fitHeight="123.0" fitWidth="151.0" layoutX="674.0" layoutY="155.0" pickOnBounds="true" />
+                        <TextArea fx:id="text_step5" layoutX="888.0" layoutY="155.0" prefHeight="150.0" prefWidth="300.0" wrapText="true" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hb_step221" prefHeight="123.0" prefWidth="590.0">
+                     <children>
+                        <Button fx:id="btn_step6" maxHeight="35.0" minHeight="35.0" mnemonicParsing="false" onAction="#eventButtonAddStepImage" prefHeight="35.0" prefWidth="100.0" text="Add" />
+                        <ImageView fx:id="image_step6" fitHeight="123.0" fitWidth="151.0" layoutX="674.0" layoutY="155.0" pickOnBounds="true" />
+                        <TextArea fx:id="text_step6" layoutX="888.0" layoutY="155.0" prefHeight="150.0" prefWidth="300.0" wrapText="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" layoutX="355.0" layoutY="6.0" prefHeight="65.0" prefWidth="284.0" text="Add Your Recipe!">
+         <font>
+            <Font name="Lucida Sans Demibold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

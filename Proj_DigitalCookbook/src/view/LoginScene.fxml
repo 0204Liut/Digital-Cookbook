@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="475.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginSceneController">
+   <children>
+      <ImageView fitHeight="475.0" fitWidth="679.0" opacity="0.51">
+         <image>
+            <Image url="@../image/background.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="112.0" layoutY="178.0" prefHeight="166.0" prefWidth="469.0" spacing="20.0">
+         <children>
+            <HBox layoutX="81.0" layoutY="152.0" prefHeight="42.0" prefWidth="398.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="81.0" layoutY="152.0" prefHeight="42.0" prefWidth="171.0" text="DataBase URL: " />
+                  <TextField fx:id="text_url" layoutX="255.0" layoutY="152.0" prefHeight="42.0" prefWidth="298.0" promptText="Type your DB URL" />
+               </children>
+            </HBox>
+            <HBox layoutX="81.0" layoutY="229.0" prefHeight="42.0" prefWidth="398.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="81.0" layoutY="236.0" prefHeight="42.0" prefWidth="171.0" text="DataBase User: " />
+                  <TextField fx:id="text_user" layoutX="255.0" layoutY="229.0" prefHeight="42.0" prefWidth="300.0" promptText="Type your DB UserName" />
+               </children>
+            </HBox>
+            <HBox layoutX="57.0" layoutY="294.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="57.0" layoutY="301.0" prefHeight="42.0" prefWidth="173.0" text="DataBase Password: " />
+                  <PasswordField fx:id="text_password" layoutX="255.0" layoutY="294.0" prefHeight="42.0" prefWidth="297.0" promptText="Type your DB Password" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="120.0" layoutY="68.0" prefHeight="86.0" prefWidth="453.0" text="Connect to Your DataBase">
+         <font>
+            <Font name="Gadugi Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_connect" layoutX="282.0" layoutY="374.0" mnemonicParsing="false" onAction="#event_connectToDB" prefHeight="42.0" prefWidth="116.0" text="Connect" />
+   </children>
+</AnchorPane>

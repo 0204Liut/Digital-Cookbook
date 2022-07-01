@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="556.0" prefWidth="733.0" style="-fx-background-color: #FFEFD5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainSceneController">
+   <children>
+      <Label alignment="CENTER" layoutX="208.0" layoutY="47.0" prefHeight="101.0" prefWidth="305.0" text="Digital Cookbook" AnchorPane.topAnchor="47.0">
+         <font>
+            <Font name="Gadugi Bold" size="32.0" />
+         </font>
+      </Label>
+      <BorderPane layoutX="56.0" layoutY="250.0" prefHeight="276.0" prefWidth="629.0">
+         <bottom>
+            <Button fx:id="btn_showFavor" mnemonicParsing="false" onAction="#eventButton" prefHeight="42.0" prefWidth="112.0" text="Show All" BorderPane.alignment="CENTER">
+               <tooltip>
+                  <Tooltip autoHide="true" text="view all favorite recipe" />
+               </tooltip></Button>
+         </bottom>
+         <top>
+            <Label fx:id="label_myfavor" alignment="CENTER" prefHeight="36.0" prefWidth="298.0" text="My Favorite: (only 3 shown)" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <VBox maxWidth="151.0" minWidth="151.0" prefHeight="198.0" prefWidth="151.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="image_favor1" fitHeight="123.0" fitWidth="151.0" pickOnBounds="true" />
+                  <Label fx:id="name_favor1" alignment="TOP_CENTER" contentDisplay="CENTER" ellipsisString="" onMouseClicked="#clickFavorRec" onMouseEntered="#event_highlightLabel_1" onMouseExited="#event_cancelHighlightLabel_1" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets right="10.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox maxHeight="198.0" maxWidth="151.0" prefHeight="198.0" prefWidth="151.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="image_favor2" fitHeight="123.0" fitWidth="151.0" pickOnBounds="true" />
+                  <Label fx:id="name_favor2" alignment="CENTER" onMouseClicked="#clickFavorRec" onMouseEntered="#event_highlightLabel_2" onMouseExited="#event_cancelHighlightLabel_2" textAlignment="JUSTIFY" wrapText="true" VBox.vgrow="SOMETIMES">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <VBox maxWidth="151.0" prefHeight="198.0" prefWidth="151.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="image_favor3" fitHeight="123.0" fitWidth="151.0" nodeOrientation="INHERIT" pickOnBounds="true" />
+                  <Label fx:id="name_favor3" alignment="TOP_CENTER" onMouseClicked="#clickFavorRec" onMouseEntered="#event_highlightLabel_3" onMouseExited="#event_cancelHighlightLabel_3" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin></Label>
+               </children>
+            </VBox>
+         </right>
+      </BorderPane>
+      <FlowPane alignment="CENTER" layoutX="76.0" layoutY="162.0" prefHeight="88.0" prefWidth="620.0">
+         <children>
+            <TextField fx:id="text_1" prefHeight="45.0" prefWidth="337.0" promptText="search recipe" />
+            <Button fx:id="btn_search" mnemonicParsing="false" onAction="#eventButton2" prefHeight="45.0" prefWidth="96.0" text="Search" />
+            <Button mnemonicParsing="false" onAction="#addNewRecipe" prefHeight="45.0" prefWidth="98.0" text="Add New">
+               <tooltip>
+                  <Tooltip text="Add your New Recipe! " />
+               </tooltip></Button>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>
